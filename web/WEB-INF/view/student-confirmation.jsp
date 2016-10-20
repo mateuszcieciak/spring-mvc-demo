@@ -1,4 +1,5 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,14 @@ Country: ${student.country}
 <br><br>
 
 Favourite language: ${student.favouriteLanguage}
+<br><br>
+
+Operating systems:
+<ul>
+    <c:forEach var="temp" items="${student.operatingSystems}">
+        <li>${temp}</li>
+    </c:forEach>
+</ul>
 <br><br>
 
 </body>
